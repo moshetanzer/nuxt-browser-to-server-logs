@@ -1,6 +1,23 @@
 # Changelog
 
 
+## v0.0.7
+
+[compare changes](https://github.com/moshetanzer/nuxt-browser-to-server-logs/compare/v0.0.6...v0.0.7)
+
+### 🩹 Fixes
+
+- Try fix sanitization ([65580da](https://github.com/moshetanzer/nuxt-browser-to-server-logs/commit/65580da))
+
+### 🏡 Chore
+
+- **release:** V0.0.6 ([2a9e5d1](https://github.com/moshetanzer/nuxt-browser-to-server-logs/commit/2a9e5d1))
+- Remove test from ci - not sure what best way to test this is :( ([d0f1094](https://github.com/moshetanzer/nuxt-browser-to-server-logs/commit/d0f1094))
+
+### ❤️ Contributors
+
+- Moshe Tanzer <tanzermt@gmail.com>
+
 ## v0.0.6
 
 [compare changes](https://github.com/moshetanzer/nuxt-browser-to-server-logs/compare/v0.0.5...v0.0.6)
