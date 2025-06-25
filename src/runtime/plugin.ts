@@ -19,6 +19,27 @@ interface LogPayload {
 
 export default defineNuxtPlugin((_nuxtApp) => {
   if (import.meta.client && import.meta.env.DEV) {
+    const cleanConsoleMessage = (args: unknown[]): string => {
+      if (args.length === 0) return ''
+
+      let message = args[0]?.toString() || ''
+      let argIndex = 1
+
+      message = message.replace(/%c/g, () => {
+        if (argIndex < args.length) {
+          argIndex++
+        }
+        return ''
+      })
+
+      const remainingArgs = args.slice(argIndex)
+      if (remainingArgs.length > 0) {
+        message += ' ' + remainingArgs.join(' ')
+      }
+
+      return message.trim()
+    }
+
     const sendLog = async (level: LogLevel, message: string, extra: LogExtra = {}): Promise<void> => {
       try {
         const payload: LogPayload & LogExtra = {
@@ -35,7 +56,6 @@ export default defineNuxtPlugin((_nuxtApp) => {
         })
       }
       catch {
-        // ignore for now
       }
     }
 
@@ -52,7 +72,7 @@ export default defineNuxtPlugin((_nuxtApp) => {
     }
 
     console.log = (...args: unknown[]): void => {
-      const message = args.join(' ')
+      const message = cleanConsoleMessage(args)
       if (shouldLogMessage(message)) {
         sendLog('log', message)
       }
@@ -60,7 +80,7 @@ export default defineNuxtPlugin((_nuxtApp) => {
     }
 
     console.warn = (...args: unknown[]): void => {
-      const message = args.join(' ')
+      const message = cleanConsoleMessage(args)
       if (shouldLogMessage(message)) {
         sendLog('warn', message)
       }
@@ -68,7 +88,7 @@ export default defineNuxtPlugin((_nuxtApp) => {
     }
 
     console.error = (...args: unknown[]): void => {
-      const message = args.join(' ')
+      const message = cleanConsoleMessage(args)
       if (shouldLogMessage(message)) {
         sendLog('error', message)
       }
@@ -76,7 +96,7 @@ export default defineNuxtPlugin((_nuxtApp) => {
     }
 
     console.info = (...args: unknown[]): void => {
-      const message = args.join(' ')
+      const message = cleanConsoleMessage(args)
       if (shouldLogMessage(message)) {
         sendLog('info', message)
       }
