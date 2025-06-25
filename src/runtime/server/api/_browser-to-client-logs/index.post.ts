@@ -25,6 +25,8 @@ const decodeHtmlEntities = (str: string) => {
       .replace(/&quot;/g, '"')
       .replace(/&#x27;/g, '\'')
       .replace(/&#39;/g, '\'')
+      .replace(/&#x2F;/g, '/')
+      .replace(/&#47;/g, '/')
       .replace(/&nbsp;/g, ' ')
   }
 
