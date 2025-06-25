@@ -1,6 +1,23 @@
 # Changelog
 
 
+## v0.0.8
+
+[compare changes](https://github.com/moshetanzer/nuxt-browser-to-server-logs/compare/v0.0.7...v0.0.8)
+
+### 🩹 Fixes
+
+- Add decode html entity on server ([9559254](https://github.com/moshetanzer/nuxt-browser-to-server-logs/commit/9559254))
+- Try do decode on server v2 ([0b63562](https://github.com/moshetanzer/nuxt-browser-to-server-logs/commit/0b63562))
+
+### 🏡 Chore
+
+- **release:** V0.0.7 ([ec932ed](https://github.com/moshetanzer/nuxt-browser-to-server-logs/commit/ec932ed))
+
+### ❤️ Contributors
+
+- Moshe Tanzer <tanzermt@gmail.com>
+
 ## v0.0.7
 
 [compare changes](https://github.com/moshetanzer/nuxt-browser-to-server-logs/compare/v0.0.6...v0.0.7)
