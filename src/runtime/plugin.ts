@@ -56,6 +56,7 @@ export default defineNuxtPlugin((_nuxtApp) => {
         })
       }
       catch {
+        // Ignore errors in sending logs
       }
     }
 

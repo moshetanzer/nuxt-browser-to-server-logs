@@ -1,6 +1,6 @@
 import { defineNuxtModule, addPlugin, createResolver, addServerHandler } from '@nuxt/kit'
 
-export interface ModuleOptions {}
+export type ModuleOptions = object
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
@@ -15,7 +15,7 @@ export default defineNuxtModule<ModuleOptions>({
 
     addServerHandler({
       route: '/api/_browser-to-client-logs',
-      handler: resolver.resolve('./runtime/server/api/_browser-to-client-logs/index.post.ts'),
+      handler: resolver.resolve('./runtime/server/api/_browser-to-client-logs/index.post'),
     })
   },
 })
