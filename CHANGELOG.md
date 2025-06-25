@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v0.0.6
+
+[compare changes](https://github.com/moshetanzer/nuxt-browser-to-server-logs/compare/v0.0.5...v0.0.6)
+
+### 🚀 Enhancements
+
+- Add youch for stack trace parse ([321a533](https://github.com/moshetanzer/nuxt-browser-to-server-logs/commit/321a533))
+
+### 🏡 Chore
+
+- **release:** V0.0.5 ([9020ab8](https://github.com/moshetanzer/nuxt-browser-to-server-logs/commit/9020ab8))
+
+### ❤️ Contributors
+
+- Moshe Tanzer <tanzermt@gmail.com>
+
 ## v0.0.5
 
 [compare changes](https://github.com/moshetanzer/nuxt-browser-to-server-logs/compare/v0.0.4...v0.0.5)
