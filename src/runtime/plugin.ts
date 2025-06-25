@@ -34,7 +34,36 @@ export default defineNuxtPlugin((_nuxtApp) => {
 
       const remainingArgs = args.slice(argIndex)
       if (remainingArgs.length > 0) {
-        message += ' ' + remainingArgs.join(' ')
+        // Safely convert each argument to string
+        const safeArgs = remainingArgs.map((arg) => {
+          try {
+            if (arg === null) return 'null'
+            if (arg === undefined) return 'undefined'
+            if (typeof arg === 'object') {
+              // Try JSON.stringify first for objects
+              try {
+                return JSON.stringify(arg)
+              }
+              catch {
+                // If JSON.stringify fails (circular reference, etc.), use toString
+                try {
+                  return String(arg)
+                }
+                catch {
+                  // If toString also fails, return a safe fallback
+                  return '[object Object]'
+                }
+              }
+            }
+            return String(arg)
+          }
+          catch {
+            // Ultimate fallback
+            return '[Unprintable Object]'
+          }
+        })
+
+        message += ' ' + safeArgs.join(' ')
       }
 
       return message.trim()
@@ -42,12 +71,26 @@ export default defineNuxtPlugin((_nuxtApp) => {
 
     const sendLog = async (level: LogLevel, message: string, extra: LogExtra = {}): Promise<void> => {
       try {
+        // Safely serialize extra data
+        const safeExtra: LogExtra = {}
+        for (const [key, value] of Object.entries(extra)) {
+          try {
+            // Test if the value can be JSON serialized
+            JSON.stringify(value)
+            safeExtra[key] = value
+          }
+          catch {
+            // If not serializable, convert to string
+            safeExtra[key] = String(value)
+          }
+        }
+
         const payload: LogPayload & LogExtra = {
           level,
           message,
           timestamp: new Date().toISOString(),
           url: window.location.href,
-          ...extra,
+          ...safeExtra,
         }
 
         await $fetch('/api/_browser-to-client-logs', {
@@ -111,7 +154,7 @@ export default defineNuxtPlugin((_nuxtApp) => {
           filename: event.filename,
           line: event.lineno,
           column: event.colno,
-          stack: event.error?.stack,
+          stack: event.error?.stack?.toString(),
         })
       }
     })
