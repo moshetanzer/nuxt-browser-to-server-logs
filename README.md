@@ -14,7 +14,7 @@ Find and replace all on all files (CMD+SHIFT+F):
 [![License][license-src]][license-href]
 [![Nuxt][nuxt-src]][nuxt-href]
 
-A useful nuxt module for passing browser errors to server terminal for ai terminal agents. 
+A handy Nuxt module to forward browser console logs to server terminal — ideal for debugging with AI terminal agents (e.g., claude code etc).
 
 - [✨ &nbsp;Release Notes](/CHANGELOG.md)
 <!-- - [🏀 Online playground](https://stackblitz.com/github/your-org/nuxt-browser-to-server-logs?file=playground%2Fapp.vue) -->
@@ -36,8 +36,7 @@ Install the module to your Nuxt application with one command:
 npx nuxi module add nuxt-browser-to-server-logs
 ```
 
-That's it! You can now use Nuxt Browser-to-Server Logs in your Nuxt app ✨
-
+You're all set — logs from the browser will now stream into your server terminal! 🎉
 
 ## Contribution
 
