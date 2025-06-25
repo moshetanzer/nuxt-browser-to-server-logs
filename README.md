@@ -8,8 +8,6 @@
 A handy Nuxt module to forward browser console logs to server terminal — ideal for debugging with AI terminal agents (e.g., claude code etc).
 
 - [✨ &nbsp;Release Notes](/CHANGELOG.md)
- [🏀 Online playground](https://stackblitz.com/github/moshetanzer/nuxt-browser-to-server-logs?file=playground%2Fapp.vue)
-<!-- - [📖 &nbsp;Documentation](https://example.com) -->
 
 ## Features
 
