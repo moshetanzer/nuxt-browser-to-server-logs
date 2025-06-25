@@ -10,12 +10,11 @@ export default defineNuxtModule<ModuleOptions>({
   defaults: {},
   setup(_options, _nuxt) {
     const resolver = createResolver(import.meta.url)
-
-    addPlugin(resolver.resolve('./runtime/plugin'))
-
     addServerHandler({
       route: '/api/_browser-to-client-logs',
       handler: resolver.resolve('./runtime/server/api/_browser-to-client-logs/index.post'),
     })
+
+    addPlugin(resolver.resolve('./runtime/plugin'))
   },
 })
