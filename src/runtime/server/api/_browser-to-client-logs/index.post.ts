@@ -1,5 +1,6 @@
 import { defineEventHandler, readBody } from 'h3'
 import { createConsola } from 'consola'
+import Youch from 'youch'
 
 const clientLogger = createConsola({
   formatOptions: {
@@ -31,7 +32,11 @@ export default defineEventHandler(async (event) => {
         break
       case 'error':
         if (log.stack) {
-          clientLogger.error(log.message, '\n' + log.stack)
+          const error = new Error(log.message)
+          error.stack = log.stack
+          const youch = new Youch(error, {})
+          const formattedError = await youch.toJSON()
+          clientLogger.error(JSON.stringify(formattedError, null, 2))
         }
         else {
           clientLogger.error(logData)
