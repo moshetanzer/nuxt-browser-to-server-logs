@@ -10,12 +10,33 @@ const clientLogger = createConsola({
   },
 }).withTag('BROWSER')
 
+const decodeHtmlEntities = (str: string) => {
+  if (typeof str !== 'string') return str
+
+  let decoded = str
+  let previousDecoded = ''
+
+  while (decoded !== previousDecoded) {
+    previousDecoded = decoded
+    decoded = decoded
+      .replace(/&amp;/g, '&')
+      .replace(/&lt;/g, '<')
+      .replace(/&gt;/g, '>')
+      .replace(/&quot;/g, '"')
+      .replace(/&#x27;/g, '\'')
+      .replace(/&#39;/g, '\'')
+      .replace(/&nbsp;/g, ' ')
+  }
+
+  return decoded
+}
+
 export default defineEventHandler(async (event) => {
   try {
     const log = await readBody(event)
 
     const logData = {
-      message: log.message,
+      message: decodeHtmlEntities(log.message),
       url: log.url ? new URL(log.url).pathname : 'unknown',
       ...(log.filename && { file: `${log.filename}:${log.line}:${log.column}` }),
     }
@@ -32,8 +53,8 @@ export default defineEventHandler(async (event) => {
         break
       case 'error':
         if (log.stack) {
-          const error = new Error(log.message)
-          error.stack = log.stack
+          const error = new Error(decodeHtmlEntities(log.message))
+          error.stack = decodeHtmlEntities(log.stack)
           const youch = new Youch(error, {})
           const formattedError = await youch.toJSON()
           clientLogger.error(JSON.stringify(formattedError, null, 2))
@@ -52,6 +73,6 @@ export default defineEventHandler(async (event) => {
     return { success: true }
   }
   catch {
-    // dont log errors
+    // siilent ignore
   }
 })
