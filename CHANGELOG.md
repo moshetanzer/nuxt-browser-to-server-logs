@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v0.0.5
+
+[compare changes](https://github.com/moshetanzer/nuxt-browser-to-server-logs/compare/v0.0.4...v0.0.5)
+
+### 🩹 Fixes
+
+- Searialize properly ([70295b4](https://github.com/moshetanzer/nuxt-browser-to-server-logs/commit/70295b4))
+
+### 🏡 Chore
+
+- **release:** V0.0.4 ([2c658c8](https://github.com/moshetanzer/nuxt-browser-to-server-logs/commit/2c658c8))
+
+### ❤️ Contributors
+
+- Moshe Tanzer <tanzermt@gmail.com>
+
 ## v0.0.4
 
 [compare changes](https://github.com/moshetanzer/nuxt-browser-to-server-logs/compare/v0.0.3...v0.0.4)
