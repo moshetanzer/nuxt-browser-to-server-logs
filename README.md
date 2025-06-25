@@ -1,24 +1,13 @@
-<!--
-Get your module up and running quickly.
-
-Find and replace all on all files (CMD+SHIFT+F):
-- Name: Nuxt Browser-to-Server Logs
-- Package name: nuxt-browser-to-server-logs
-- Description: My new Nuxt module
--->
 
 # Nuxt Browser-to-Server Logs
-
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![License][license-src]][license-href]
 [![Nuxt][nuxt-src]][nuxt-href]
 
-My new Nuxt module for doing amazing things.
+A handy Nuxt module to forward browser console logs to server terminal — ideal for debugging with AI terminal agents (e.g., claude code etc).
 
 - [✨ &nbsp;Release Notes](/CHANGELOG.md)
-<!-- - [🏀 Online playground](https://stackblitz.com/github/your-org/nuxt-browser-to-server-logs?file=playground%2Fapp.vue) -->
-<!-- - [📖 &nbsp;Documentation](https://example.com) -->
 
 ## Features
 
@@ -36,8 +25,7 @@ Install the module to your Nuxt application with one command:
 npx nuxi module add nuxt-browser-to-server-logs
 ```
 
-That's it! You can now use Nuxt Browser-to-Server Logs in your Nuxt app ✨
-
+You're all set — logs from the browser will now stream into your server terminal! 🎉
 
 ## Contribution
 
