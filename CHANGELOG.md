@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.0.3
+
+[compare changes](https://github.com/moshetanzer/nuxt-browser-to-server-logs/compare/v0.0.2...v0.0.3)
+
+### 🩹 Fixes
+
+- Try fix path ([ec852a1](https://github.com/moshetanzer/nuxt-browser-to-server-logs/commit/ec852a1))
+
+### ❤️ Contributors
+
+- Moshe Tanzer <tanzermt@gmail.com>
+
 ## v0.0.2
 
 
