@@ -1,6 +1,24 @@
 # Changelog
 
 
+## v0.0.10
+
+[compare changes](https://github.com/moshetanzer/nuxt-browser-to-server-logs/compare/v0.0.9...v0.0.10)
+
+### 🩹 Fixes
+
+- Avoid recursive JSON issue ([cf8de85](https://github.com/moshetanzer/nuxt-browser-to-server-logs/commit/cf8de85))
+
+### 🏡 Chore
+
+- **release:** V0.0.9 ([c924838](https://github.com/moshetanzer/nuxt-browser-to-server-logs/commit/c924838))
+- Remove import.meta.end.dev since have added dev check in module.ts ([c9e6501](https://github.com/moshetanzer/nuxt-browser-to-server-logs/commit/c9e6501))
+- Clean up ([598f362](https://github.com/moshetanzer/nuxt-browser-to-server-logs/commit/598f362))
+
+### ❤️ Contributors
+
+- Moshe Tanzer <tanzermt@gmail.com>
+
 ## v0.0.9
 
 [compare changes](https://github.com/moshetanzer/nuxt-browser-to-server-logs/compare/v0.0.8...v0.0.9)
