@@ -1,6 +1,26 @@
 # Changelog
 
 
+## v0.0.11
+
+[compare changes](https://github.com/moshetanzer/nuxt-browser-to-server-logs/compare/v0.0.10...v0.0.11)
+
+### 🚀 Enhancements
+
+- Remove suspense warning from being passed to terminal ([17f4467](https://github.com/moshetanzer/nuxt-browser-to-server-logs/commit/17f4467))
+
+### 🩹 Fixes
+
+- Comparison for blocked pattern ([1c2a819](https://github.com/moshetanzer/nuxt-browser-to-server-logs/commit/1c2a819))
+
+### 🏡 Chore
+
+- **release:** V0.0.10 ([ead44c7](https://github.com/moshetanzer/nuxt-browser-to-server-logs/commit/ead44c7))
+
+### ❤️ Contributors
+
+- Moshe Tanzer <tanzermt@gmail.com>
+
 ## v0.0.10
 
 [compare changes](https://github.com/moshetanzer/nuxt-browser-to-server-logs/compare/v0.0.9...v0.0.10)
