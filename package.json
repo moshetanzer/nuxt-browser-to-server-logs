@@ -35,6 +35,7 @@
   },
   "dependencies": {
     "@nuxt/kit": "^3.17.5",
+    "@vueuse/core": "^13.4.0",
     "consola": "^3.4.2",
     "youch": "^3.3.4"
   },
