@@ -28,13 +28,46 @@ export default defineNuxtPlugin((_nuxtApp) => {
     send(JSON.stringify(payload))
   }
 
-  const formatMessage = (args: unknown[]): string => {
-    return args.map((arg) => {
-      if (typeof arg === 'object') {
-        return JSON.stringify(arg)
+  const safeStringify = (obj: unknown, maxDepth = 3, currentDepth = 0): string => {
+    if (currentDepth > maxDepth) return '[Max Depth Reached]'
+
+    if (obj === null) return 'null'
+    if (obj === undefined) return 'undefined'
+
+    const objType = typeof obj
+    if (objType === 'string' || objType === 'number' || objType === 'boolean') {
+      return String(obj)
+    }
+
+    if (objType === 'function') return '[Function]'
+    if (obj instanceof Date) return obj.toISOString()
+    if (obj instanceof Error) return `Error: ${obj.message}`
+
+    if (objType === 'object') {
+      if (obj instanceof Node) return '[DOM Element]'
+
+      try {
+        const seen = new WeakSet()
+        return JSON.stringify(obj, (key, value) => {
+          if (typeof value === 'object' && value !== null) {
+            if (seen.has(value)) return '[Circular Reference]'
+            seen.add(value)
+          }
+          if (typeof value === 'function') return '[Function]'
+          if (value instanceof Node) return '[DOM Element]'
+          return value
+        })
       }
-      return String(arg)
-    }).join(' ')
+      catch {
+        return '[Unserializable Object]'
+      }
+    }
+
+    return String(obj)
+  }
+
+  const formatMessage = (args: unknown[]): string => {
+    return args.map(arg => safeStringify(arg)).join(' ')
   }
 
   const originalConsole = {
