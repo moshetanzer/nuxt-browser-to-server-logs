@@ -1,6 +1,28 @@
 # Changelog
 
 
+## v0.0.9
+
+[compare changes](https://github.com/moshetanzer/nuxt-browser-to-server-logs/compare/v0.0.8...v0.0.9)
+
+### 🚀 Enhancements
+
+- Use websockets instead of http ([0aac53c](https://github.com/moshetanzer/nuxt-browser-to-server-logs/commit/0aac53c))
+- Add shouldLog  and stripCSSStyles utils ([4b56dbc](https://github.com/moshetanzer/nuxt-browser-to-server-logs/commit/4b56dbc))
+
+### 🩹 Fixes
+
+- Make it only create plugin and endpoint in dev. Disable devLogs ([2694c55](https://github.com/moshetanzer/nuxt-browser-to-server-logs/commit/2694c55))
+
+### 🏡 Chore
+
+- **release:** V0.0.8 ([349259a](https://github.com/moshetanzer/nuxt-browser-to-server-logs/commit/349259a))
+- Update playground ([9ff377e](https://github.com/moshetanzer/nuxt-browser-to-server-logs/commit/9ff377e))
+
+### ❤️ Contributors
+
+- Moshe Tanzer <tanzermt@gmail.com>
+
 ## v0.0.8
 
 [compare changes](https://github.com/moshetanzer/nuxt-browser-to-server-logs/compare/v0.0.7...v0.0.8)
