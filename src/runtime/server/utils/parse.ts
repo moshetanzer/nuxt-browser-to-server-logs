@@ -18,10 +18,9 @@ export function shouldLogMessage(message: string): boolean {
     '[ssr]',
     'hydration',
     '[hydration]',
-    'ℹ <Suspense>',
-    // to avoid bugging chrome devtools not found maybe will get rid of this later
-    'vue-router',
-  ]
+    '<Suspense> is an experimental feature',
+  ].map(p => p.toLowerCase())
 
+  console.log(!blockedPatterns.some(pattern => lowerMessage.includes(pattern)))
   return !blockedPatterns.some(pattern => lowerMessage.includes(pattern))
 }
