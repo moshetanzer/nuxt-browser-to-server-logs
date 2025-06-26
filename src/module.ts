@@ -9,12 +9,19 @@ export default defineNuxtModule<ModuleOptions>({
   },
   defaults: {},
   setup(_options, _nuxt) {
+    if (!_nuxt.options.dev) return
     const resolver = createResolver(import.meta.url)
+    _nuxt.options.features.devLogs = 'silent'
+    _nuxt.options.nitro = _nuxt.options.nitro || {}
+    _nuxt.options.nitro.experimental = _nuxt.options.nitro.experimental || {}
+    _nuxt.options.nitro.experimental.websocket = true
+    _nuxt.options.experimental = _nuxt.options.experimental || {}
+
     addServerHandler({
-      route: '/api/_browser-to-client-logs',
-      handler: resolver.resolve('./runtime/server/api/_browser-to-client-logs/index.post'),
+      route: '/api/_client-to-browser-logs',
+      handler: resolver.resolve('./runtime/server/api/_client-to-browser-logs'),
     })
 
-    addPlugin(resolver.resolve('./runtime/plugin'))
+    addPlugin(resolver.resolve('./runtime/plugin.client'))
   },
 })
