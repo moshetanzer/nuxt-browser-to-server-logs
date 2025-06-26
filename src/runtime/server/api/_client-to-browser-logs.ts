@@ -62,8 +62,9 @@ export default defineWebSocketHandler({
           clientLogger.log(logData)
       }
     }
-    catch (error) {
-      console.error('Failed to process log message:', error)
+    catch {
+      // ignore this error for now not sure if this is a good idea :)
+    ///  console.error('Failed to process log message:', error)
     }
   },
 })
