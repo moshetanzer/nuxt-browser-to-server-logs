@@ -18,6 +18,7 @@ export function shouldLogMessage(message: string): boolean {
     '[ssr]',
     'hydration',
     '[hydration]',
+    'ℹ <Suspense>',
     // to avoid bugging chrome devtools not found maybe will get rid of this later
     'vue-router',
   ]
