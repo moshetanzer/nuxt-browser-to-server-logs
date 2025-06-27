@@ -1,5 +1,6 @@
 # Dependencies
 node_modules
+package-lock.json
 
 # Logs
 *.log*
@@ -54,3 +55,7 @@ coverage
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Docker
+Dockerfile
+docker-compose.yml
