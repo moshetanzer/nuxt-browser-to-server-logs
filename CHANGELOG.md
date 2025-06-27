@@ -19,7 +19,7 @@
 
 ### ❤️ Contributors
 
-- Moshe Tanzer <tanzermt@gmail.com>
+- John Tanzer
 
 ## v0.0.10
 
@@ -37,7 +37,7 @@
 
 ### ❤️ Contributors
 
-- Moshe Tanzer <tanzermt@gmail.com>
+- John Tanzer
 
 ## v0.0.9
 
@@ -59,7 +59,7 @@
 
 ### ❤️ Contributors
 
-- Moshe Tanzer <tanzermt@gmail.com>
+- John Tanzer
 
 ## v0.0.8
 
@@ -76,7 +76,7 @@
 
 ### ❤️ Contributors
 
-- Moshe Tanzer <tanzermt@gmail.com>
+- John Tanzer
 
 ## v0.0.7
 
@@ -93,7 +93,7 @@
 
 ### ❤️ Contributors
 
-- Moshe Tanzer <tanzermt@gmail.com>
+- John Tanzer
 
 ## v0.0.6
 
@@ -109,7 +109,7 @@
 
 ### ❤️ Contributors
 
-- Moshe Tanzer <tanzermt@gmail.com>
+- John Tanzer
 
 ## v0.0.5
 
@@ -125,7 +125,7 @@
 
 ### ❤️ Contributors
 
-- Moshe Tanzer <tanzermt@gmail.com>
+- John Tanzer
 
 ## v0.0.4
 
@@ -141,7 +141,7 @@
 
 ### ❤️ Contributors
 
-- Moshe Tanzer <tanzermt@gmail.com>
+- John Tanzer
 
 ## v0.0.3
 
@@ -153,7 +153,7 @@
 
 ### ❤️ Contributors
 
-- Moshe Tanzer <tanzermt@gmail.com>
+- John Tanzer
 
 ## v0.0.2
 
@@ -169,5 +169,5 @@
 
 ### ❤️ Contributors
 
-- Moshe Tanzer <tanzermt@gmail.com>
+- John Tanzer
 
