@@ -12,10 +12,13 @@ A handy Nuxt module to forward browser console logs to server terminal — ideal
 ## Features
 
 <!-- Highlight some of the features your module provide here -->
-- Captures console.log, warn, error, and info
-- Sends logs only in the browser and in development mode
-- Filters out SSR-related logs automatically
-- Handles uncaught errors and promise rejections
+- Captures browser logs and forwards to server terminal.
+- Filters out suspense, ssr logs automatically.
+- Uses websockets.
+- Allows you to just focus on server terminal (in VS Code) instead if having to keep on opening browser logs.
+- Prefixes all browser logs with [BROWSER].
+- Uses youch to beautify error logs in terminal.
+- Strips styling for clean log output in terminal.
 
 ## Quick Setup
 
