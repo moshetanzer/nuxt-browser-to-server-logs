@@ -5,7 +5,7 @@
 [![License][license-src]][license-href]
 [![Nuxt][nuxt-src]][nuxt-href]
 
-A handy Nuxt module to forward browser console logs to server terminal — ideal for debugging with AI terminal agents (e.g., claude code etc). Even if you are not using an AI tool this is so useful - you only have to have your terminal open and you see all logs there instead of hvaing to constantly open browser logs :)
+A handy Nuxt module that forwards browser console logs to your server terminal — perfect for AI debugging or just easier dev, no need to keep opening the browser console.
 
 - [✨ &nbsp;Release Notes](/CHANGELOG.md)
 
