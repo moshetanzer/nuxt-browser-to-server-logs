@@ -19,6 +19,7 @@ A handy Nuxt module to forward browser console logs to server terminal — ideal
 - Prefixes all browser logs with [BROWSER].
 - Uses youch to beautify error logs in terminal.
 - Strips styling for clean log output in terminal.
+- Zero config just install and you good to go 🚀.
 
 ## Quick Setup
 
