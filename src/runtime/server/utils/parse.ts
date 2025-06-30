@@ -21,6 +21,5 @@ export function shouldLogMessage(message: string): boolean {
     '<Suspense> is an experimental feature',
   ].map(p => p.toLowerCase())
 
-  console.log(!blockedPatterns.some(pattern => lowerMessage.includes(pattern)))
   return !blockedPatterns.some(pattern => lowerMessage.includes(pattern))
 }
