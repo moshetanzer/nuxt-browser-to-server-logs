@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v0.0.12
+
+[compare changes](https://github.com/moshetanzer/nuxt-browser-to-server-logs/compare/v0.0.11...v0.0.12)
+
+### 🩹 Fixes
+
+- Remove debug log ([2c532ff](https://github.com/moshetanzer/nuxt-browser-to-server-logs/commit/2c532ff))
+
+### 🏡 Chore
+
+- **release:** V0.0.11 ([10d6c43](https://github.com/moshetanzer/nuxt-browser-to-server-logs/commit/10d6c43))
+
+### ❤️ Contributors
+
+- Moshe Tanzer <tanzermt@gmail.com>
+
 ## v0.0.11
 
 [compare changes](https://github.com/moshetanzer/nuxt-browser-to-server-logs/compare/v0.0.10...v0.0.11)

@@ -1,6 +1,6 @@
 {
   "name": "nuxt-browser-to-server-logs",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "A Nuxt module to send browser logs to the server for better AI tool intergration",
   "repository": "moshetanzer/nuxt-browser-to-server-logs",
   "license": "MIT",
