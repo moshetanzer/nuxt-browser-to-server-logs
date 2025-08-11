@@ -1,13 +1,16 @@
 
+
 # Nuxt Browser-to-Server Logs
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
+
 [![License][license-src]][license-href]
 [![Nuxt][nuxt-src]][nuxt-href]
 
 A handy Nuxt module that forwards browser console logs to your server terminal — perfect for AI debugging or just easier dev, no need to keep opening the browser console.
 
 - [✨ &nbsp;Release Notes](/CHANGELOG.md)
+<img width="3520" height="1316" alt="terminal" src="https://github.com/user-attachments/assets/ac58ec15-9ca0-4cc4-9bd1-85ecca73cf9e" />
 
 ## Features
 
@@ -15,9 +18,8 @@ A handy Nuxt module that forwards browser console logs to your server terminal �
 - Captures browser logs and forwards to server terminal.
 - Filters out suspense, ssr logs automatically.
 - Uses websockets.
-- Allows you to just focus on server terminal (in VS Code) instead if having to keep on opening browser logs.
+- Allows you to just focus on server terminal (in your IDE or 4th screen ;)) instead of having to keep on opening and chasing browser logs.
 - Prefixes all browser logs with [BROWSER].
-- Uses youch to beautify error logs in terminal.
 - Strips styling for clean log output in terminal.
 - Zero config just install and you good to go 🚀.
 
